@@ -24,6 +24,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "homepage": "https://aejeong.github.io/NightNight",
   "browserslist": {
     "production": [
       ">0.2%",
