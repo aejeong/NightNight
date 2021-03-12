@@ -3,6 +3,7 @@ import reset from "styled-reset";
 
 const globalStyles = createGlobalStyle`
 ${reset};
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 a{
     text-decoration:none;
     color:inherit;
@@ -15,7 +16,7 @@ body{
     font-size:12px;
     background-color:rgba(20,20,20,1);
     color:white;
-    padding-top:50px;
+    /* padding-top:50px; */
 }
 `;
 

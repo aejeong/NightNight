@@ -12,7 +12,8 @@
     "react-scripts": "3.0.0",
     "react-slick": "^0.24.0",
     "styled-components": "^4.2.0",
-    "styled-reset": "^2.0.9"
+    "styled-reset": "^2.0.9",
+    "swiper": "^6.5.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -37,5 +38,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "node-sass": "^4.14.1"
   }
 }

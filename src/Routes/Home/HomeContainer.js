@@ -6,22 +6,25 @@ export default class extends React.Component{
 
     state= {
         nowPlaying: null,
-        upcoming: null,
-        popular:null,
+        // upcoming: null,
+        // popular:null,
+        latest:null,
         error: null,
         loading: true
     };
 
     async componentDidMount(){
         try{
-         const {data:{results: nowPlaying}} =  await moviesAPI.nowPlaying();
-         const {data: {results : upcoming}} = await moviesAPI.upcoming();
-        const {data : {results: popular}} = await moviesAPI.popular();
+         const {data:{results:nowPlaying}} =  await moviesAPI.nowPlaying();
 
+        //  const {data:{results: nowPlaying}} =  await moviesAPI.nowPlaying();
+        //  const {data: {results : upcoming}} = await moviesAPI.upcoming();
+        // const {data : {results: popular}} = await moviesAPI.popular();
+        console.log(nowPlaying,'----nowPlaying')
         this.setState({
         nowPlaying,
-        upcoming,
-        popular
+        // upcoming,
+        // popular
         })
         }catch{
         this.setState({
@@ -37,7 +40,16 @@ export default class extends React.Component{
 
 
     render() {
-        const { nowPlaying, upcoming, popular, error, loading } =this.state;
-        return <HomePresenter nowPlaying={nowPlaying} upcoming={upcoming} popular={popular} error={error} loading={loading}/>
+        const {
+            nowPlaying
+            // , upcoming
+            // , popular
+            , error, loading } =this.state;
+        return <HomePresenter 
+        nowPlaying={nowPlaying}
+        //  upcoming={upcoming}
+        //   popular={popular}
+        error={error}
+        loading={loading}/>
     }
 }
